@@ -5,24 +5,26 @@ var axios = require("axios");
 var cheerio = require("cheerio");
 var db = require("../models");
 // A GET route for scraping the echoJS website
-router.get("/scrape", function(req, res) {
+router.get("/", function(req, res) {
   // First, we grab the body of the html with axios
-  axios.get("http://www.echojs.com/").then(function(response) {
+  axios.get("https://www.news.com.au/world/world-news").then(function(response) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(response.data);
 
     // Now, we grab every h2 within an article tag, and do the following:
-    $("article h2").each(function(i, element) {
+    $("div.story-block").each(function(i, element) {
       // Save an empty result object
-      var result = {};
+      var title = $(element).find("h4").text();
+      var link = $(element).find("h4").children().attr("href");
+    var shortText=$(element).children().find("span").text().trim();
+      var result = [];
 
       // Add the text and href of every link, and save them as properties of the result object
-      result.title = $(this)
-        .children("a")
-        .text();
-      result.link = $(this)
-        .children("a")
-        .attr("href");
+      result.push({
+        title: title,
+        link: link,
+        info:shortText
+      });
 
       // Create a new Article using the `result` object built from scraping
       db.Article.create(result)
