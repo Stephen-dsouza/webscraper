@@ -8,20 +8,18 @@
   <section id="world-news">
     <ul id="news">
       <h1>WORLD NEWS</h2>
-      <button id="scrape">SCRAPE</button>
-      {{#each Article}}
-      <li class="newArticle">
-        <span class="articles">
-          <h2 class="addNotes" data-id={{this.id}}>{{this.title}}</h2>
-          <a href="{{this.link}}" target="_blank">{{this.title}}</a>
-          <p>{{this.info}}</p>
-        </span>
+        {{#each Article}}
+        <li class="newArticle">
+          <span class="articles">
+            <h2 class="addNotes" data-id={{this.id}}>{{this.title}}</h2>
+            <a href="{{this.link}}" target="_blank">{{this.title}}</a>
+            <p>{{this.info}}</p>
+          </span>
         </li>
-      {{/each}}
+        {{/each}}
     </ul>
   </section>
-<section id="newnotes">
-  <div id="notes"></div>
-</section>
+  <section id="newnotes">
+    <div id="notes"></div>
+  </section>
 </div>
-  
