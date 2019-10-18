@@ -13,7 +13,7 @@ router.get("/", function(req, res) {
 
     // Now, we grab every h2 within an article tag, and do the following:
     $("div.story-block").each(function(i, element) {
-      // Save an empty result object
+      // Save an empty result objects
       var title = $(element).find("h4").text();
       var link = $(element).find("h4").children().attr("href");
     var shortText=$(element).children().find("span").text().trim();
@@ -41,7 +41,8 @@ router.get("/", function(req, res) {
 
     // Send a message to the client
     //res.send("Scrape Complete");
-  });
+    res.redirect("/articles");
+  }); 
 });
 
 // Route for getting all Articles from the db
@@ -53,7 +54,7 @@ router.get("/articles", function(req, res) {
       var hbsObject = {
         Article: dbArticle
         };
-        res.render("index", hbsObject);
+        res.render("articles", hbsObject);
       });
       //res.json(dbArticle);
     })

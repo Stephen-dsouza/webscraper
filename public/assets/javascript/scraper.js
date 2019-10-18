@@ -1,6 +1,5 @@
 $(document).ready(function () {
-
-
+   
     //On click of sub=mit for burges to be devoured, the id is captured as an object and an ajax call is made .
     //This is passed to burger_controller.js
     $(".addNotes").on("click", function (event){
