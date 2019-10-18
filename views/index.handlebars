@@ -1,0 +1,24 @@
+<div class="header-container">
+  <img id="hamburger-image" src="assets/img/burger.png" alt="Burger image.">
+  <header>Eat-Da-Burger!</header>
+</div>
+
+<div class="main-container">
+
+  {{!-- Show the available burgers --}}
+  <section id="national-news">
+    <ul id="news">
+      <h2>NATIONAL NEWS</h2>
+      {{#each Article}}
+      <li class="newArticle">
+        <span class="articles">
+          {{this.title}}
+          {{this.link}}
+          {{this.info}}
+        </span>
+        </li>
+      {{/each}}
+    </ul>
+  </section>
+
+  
