@@ -31,6 +31,7 @@ router.get("/", function(req, res) {
         .then(function(dbArticle) {
           // View the added result in the console
           console.log(dbArticle);
+          
         })
         .catch(function(err) {
           // If an error occurred, log it
@@ -39,7 +40,7 @@ router.get("/", function(req, res) {
     });
 
     // Send a message to the client
-    res.send("Scrape Complete");
+    //res.send("Scrape Complete");
   });
 });
 

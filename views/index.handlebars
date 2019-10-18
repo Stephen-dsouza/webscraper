@@ -1,6 +1,5 @@
 <div class="header-container">
-  <img id="hamburger-image" src="assets/img/burger.png" alt="Burger image.">
-  <header>Eat-Da-Burger!</header>
+  <header>YOUR NATONAL NEWS AT A GLANCE</header>
 </div>
 
 <div class="main-container">
@@ -8,11 +7,11 @@
   {{!-- Show the available burgers --}}
   <section id="national-news">
     <ul id="news">
-      <h2>NATIONAL NEWS</h2>
+      <h1>NATIONAL NEWS</h2>
       {{#each Article}}
       <li class="newArticle">
         <span class="articles">
-          <h2>{{this.title}}</h2>
+          <h2 class="addNotes" data-id={{this.id}}>{{this.title}}</h2>
           <a href="{{this.link}}" target="_blank">{{this.title}}</a>
           <p>{{this.info}}</p>
         </span>
@@ -20,5 +19,8 @@
       {{/each}}
     </ul>
   </section>
-
+<section id="newnotes">
+  <div id="notes"></div>
+</section>
+</div>
   

@@ -1,5 +1,5 @@
 html {
-	background-color: #F5D769 ;
+	background-color: rgb(154, 160, 165) ;
 	font-family: monospace;
 }
 
@@ -14,7 +14,7 @@ li {
 }
 
 p {
-	text-align: center;
+	color: white;
 }
 
 section {
@@ -26,11 +26,11 @@ span {
 	float: left;
 }
 
-#burger-list {
+#newArticle {
 	margin-left: 20%;
 }
 
-#burger-list-item {
+#articles {
 	background: white;
   	padding-left: 5%;
   	padding-top: 1%;
@@ -38,60 +38,27 @@ span {
   	border: 1%;
 }
 
-#burger-submit {
-	margin-left: 50px;
-	margin-top: 50px;
-	
-}
-#devour-button {
-	position: relative;
-	bottom: -14px;
-	margin-left: 4%;
-}
 
-#hamburger-image {
-	width: 20%;
-	position: relative;
-	left: 39%;
-}
-
-
-
-
-
+#newnotes  {
+	float: right;
+	width: 30%;
+	margin-right: 10%;
+  }
+  textarea, input {
+	display: block;
+	width: 100%;
+	background-color: azure;
+  }
+  input {
+	height: 36px;
+	font-size: 24px;
+  }
+  textarea {
+	height: 200px;
+	font-size: 18px;
+  }
 
 
-.burgers {
-	width:	70%;
-	background: white;
-	padding-left: 5%;
-	padding-top: 1%;
-	padding-bottom: 2%;
-	margin: 1%;
-}
-
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-}
-
-.devour-burger {
-	width: 60%;
-	background: white;
-	border-style: ridge;
-	border-width: 1px;
-  	padding-left: 5%;
-  	padding-top: 1%;
-  	padding-bottom: 2%;
-}
-
-.form-group {
-  margin-bottom: 5px;
-}
-
-.label {
-  font-weight: bold;
-}
 
 /* 
   These rules take effect when the browser's width
@@ -113,51 +80,6 @@ span {
 		width: 100%;
 	}
 
-	#burger-list {
-		margin-left: 0;
-	}
-
-	/* Hide devoured list on mobile for better user experience. */
-	#devoured-hamburgers {
-		display: none;
-	}
-
-	#hamburger-image {
-		width: 50%;
-		left: 25%;
-	}
-
-	#new-burger {
-		width: 100%;
-	}
-	#burger-submit {
-		margin-left: 50px;
-		margin-top: 50px;
-		
-	}
-	
-	
-	.burgers {
-		width: 90%;
-		font-size: 20px;
-		position: relative;
-		right: 4%;
-	}
-
-	.create-update-form {
-		width: 100%;
-		position: relative;
-		right: 24%;
-	}
-
-	.devour-button {
-		background-color: #4e91fd;
-		color: white;
-		font-size: 20px;
-		margin-left: -13px;
-		margin-top: -18px;
-		margin-bottom: 17px;
-	}
 
 	.form-group {
 		width: 100%;
