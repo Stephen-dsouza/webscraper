@@ -12,9 +12,9 @@
       {{#each Article}}
       <li class="newArticle">
         <span class="articles">
-          {{this.title}}
-          {{this.link}}
-          {{this.info}}
+          <h2>{{this.title}}</h2>
+          <a href="{{this.link}}" target="_blank">{{this.title}}</a>
+          <p>{{this.info}}</p>
         </span>
         </li>
       {{/each}}
